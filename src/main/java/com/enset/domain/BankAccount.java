@@ -1,25 +1,25 @@
 package com.enset.domain;
 
 public class BankAccount {
-    private int AccountNumber;
+    private Long AccountNumber;
     private double balance;
     private String accountHolderName;
 
     public BankAccount() {
     }
 
-    public BankAccount(int accountNumber, double balance, String accountHolderName) {
-        AccountNumber = accountNumber;
+    public BankAccount(Long accountNumber, double balance, String accountHolderName) {
+        this.AccountNumber = accountNumber;
         this.balance = balance;
         this.accountHolderName = accountHolderName;
     }
 
-    public int getAccountNumber() {
+    public Long getAccountNumber() {
         return AccountNumber;
     }
 
-    public void setAccountNumber(int accountNumber) {
-        AccountNumber = accountNumber;
+    public void setAccountNumber(Long accountNumber) {
+        this.AccountNumber = accountNumber;
     }
 
     public double getBalance() {
@@ -42,7 +42,6 @@ public class BankAccount {
     public String toString() {
         return "BankAccount{" +
                 "AccountNumber=" + AccountNumber +
-                ", balance=" + balance +
                 ", accountHolderName='" + accountHolderName + '\'' +
                 '}';
     }

@@ -3,13 +3,15 @@ package com.enset.exceptions;
 import com.enset.domain.BankAccount;
 
 public class NonExistingAccountException extends Exception{
-    private BankAccount account;
-    public NonExistingAccountException(String message,BankAccount account) {
+    private String account;
+
+    //we might need to change the String to Long
+    public NonExistingAccountException(String message,String account) {
         super(message);
         this.account = account;
     }
 
-    public BankAccount getAccount() {
+    public String getAccount() {
         return account;
     }
 }
